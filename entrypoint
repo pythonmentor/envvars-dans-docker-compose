@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Lire la variable MY_VAR
+if [ -z "${MY_VAR}" ]; then
+  echo "Dans /entrypoint, la variable MY_VAR n'est pas définie"
+  exit 1
+fi
+
+echo "Dans /entrypoint, la valeur de MY_VAR est : ${MY_VAR}"
+
+# Exécuter la commande principale du conteneur
+exec "$@"

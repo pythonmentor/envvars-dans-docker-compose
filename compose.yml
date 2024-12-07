@@ -1,0 +1,12 @@
+services:
+  monservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: monservice_container
+    image: monservice_image
+    env_file:
+      - my_env_file
+    command: 
+      - /bin/bash 
+      - /start

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Lire la variable MY_VAR
+if [ -z "${MY_VAR}" ]; then
+  echo "La variable MY_VAR n'est pas définie"
+  exit 1
+fi
+
+echo "Dans /start, la valeur de MY_VAR est : ${MY_VAR}"
